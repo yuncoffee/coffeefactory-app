@@ -7,6 +7,7 @@
 
 import SwiftUI
 import SwiftData
+import CoffeeFactorySwift
 
 @main
 struct coffeefactoryApp: App {
@@ -23,6 +24,10 @@ struct coffeefactoryApp: App {
         }
     }()
 
+    init() {
+        CoffeeFactoryFont.registerFonts()
+    }
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
