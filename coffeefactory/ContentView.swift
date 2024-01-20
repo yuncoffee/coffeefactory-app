@@ -8,10 +8,14 @@
 import SwiftUI
 import SwiftData
 import WebKit
+import CoffeeFactorySwift
 
 struct ContentView: View {
     @Environment(\.modelContext) private var modelContext
     @Query private var items: [Item]
+    
+    @State 
+    private var myBorderColor: Color = .cf(.colorScale(.blue(.base)))
     
     var body: some View {
 //        NavigationSplitView {
@@ -43,35 +47,49 @@ struct ContentView: View {
 //        } detail: {
 //            Text("Select an item")
 //        }
-        VStack {
+        VStack(alignment: .leading, spacing: 4) {
 //            WebView(urlToLoad: "https://www.naver.com")
-            Text("Hello Coffee Factory1234567")
-                .foregroundStyle(Color.cf(.colorScale(.blue(.base))))
+            Text("Hello Coffee Factory\n1234567")
+                .foregroundStyle(myBorderColor)
                 .pretendard(.display)
-            Text("Hello Coffee Factory1234567")
+                .border(myBorderColor, width: 1)
+            Text("Hello Coffee Factory\n1234567")
                 .font(.largeTitle)
+                .border(.cf(.colorScale(.green(.base))), width: 1)
 ////                .foregroundStyle(Color.customColor)
             Text("Hello Coffee\nFactory")
-                .background(Color.cf(.primaryScale(.primary(.base))))
-                .foregroundStyle(Color.cf(.colorScale(.lavendar(.dark))))
+                .background(.cf(.primaryScale(.primary(.base))))
+                .foregroundStyle(.cf(.colorScale(.lavendar(.dark))))
                 .pretendard(.largeTitle)
+                .border(.cf(.colorScale(.green(.base))), width: 1)
             Text("Hello Coffee\nFactory")
                 .pretendard(.title)
-            Text("Hello Coffee Factory")
+                .border(.cf(.colorScale(.green(.base))), width: 1)
+            Text("Hello Coffee\nFactory")
                 .pretendard(.title2)
-            Text("Hello Coffee Factory")
+                .border(.cf(.colorScale(.green(.base))), width: 1)
+            Text("Hello Coffee\nFactory")
                 .pretendard(.title3)
-            Text("Hello Coffee Factory")
+                .border(.cf(.colorScale(.green(.base))), width: 1)
+            Text("Hello Coffee\nFactory")
                 .pretendard(.subTitle)
-            Text("Hello Coffee Factory")
+                .border(.cf(.colorScale(.green(.base))), width: 1)
+            Text("Hello Coffee\nFactory")
                 .pretendard(.headline)
-            Text("Hello Coffee Factory")
+                .border(.cf(.colorScale(.green(.base))), width: 1)
+            Text("Hello Coffee\nFactory")
                 .pretendard(.body)
-            Text("Hello Coffee Factory")
+                .border(.cf(.colorScale(.green(.base))), width: 1)
+            Text("Hello Coffee\nFactory123")
                 .pretendard(.caption)
-            Text("Hello Coffee Factory")
+                .border(.cf(.colorScale(.green(.base))), width: 1)
+            Text("Hello Coffee\nFactory123")
                 .pretendard(.caption2)
+                .border(.cf(.colorScale(.green(.base))), width: 1)
         }
+        .frame(alignment: .leading)
+        .padding()
+        .border(.cf(.colorScale(.red(.darkness))), width: 2)
     }
 
     private func addItem() {
