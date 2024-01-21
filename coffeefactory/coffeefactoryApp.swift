@@ -6,24 +6,10 @@
 //
 
 import SwiftUI
-import SwiftData
 import CoffeeFactorySwift
 
 @main
 struct coffeefactoryApp: App {
-    var sharedModelContainer: ModelContainer = {
-        let schema = Schema([
-            Item.self,
-        ])
-        let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
-
-        do {
-            return try ModelContainer(for: schema, configurations: [modelConfiguration])
-        } catch {
-            fatalError("Could not create ModelContainer: \(error)")
-        }
-    }()
-
     init() {
         CoffeeFactoryFont.registerFonts()
     }
@@ -32,6 +18,5 @@ struct coffeefactoryApp: App {
         WindowGroup {
             ContentView()
         }
-        .modelContainer(sharedModelContainer)
     }
 }

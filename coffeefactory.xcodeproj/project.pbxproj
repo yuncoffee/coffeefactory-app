@@ -16,6 +16,8 @@
 		2025672B2B28A54E00DB0590 /* coffeefactoryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2025672A2B28A54E00DB0590 /* coffeefactoryUITests.swift */; };
 		2025672D2B28A54E00DB0590 /* coffeefactoryUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2025672C2B28A54E00DB0590 /* coffeefactoryUITestsLaunchTests.swift */; };
 		20356A152B49E41900D9412A /* description.md in Resources */ = {isa = PBXBuildFile; fileRef = 20356A142B49E41900D9412A /* description.md */; };
+		207B98F62B5CD0BD00CACFDF /* TypoTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207B98F52B5CD0BC00CACFDF /* TypoTestView.swift */; };
+		207B98F82B5CD11000CACFDF /* SymbolTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207B98F72B5CD11000CACFDF /* SymbolTestView.swift */; };
 		209134DD2B413F0700FD76AC /* coffee-factory-swift in Frameworks */ = {isa = PBXBuildFile; productRef = 209134DC2B413F0700FD76AC /* coffee-factory-swift */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +53,8 @@
 		2025672A2B28A54E00DB0590 /* coffeefactoryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = coffeefactoryUITests.swift; sourceTree = "<group>"; };
 		2025672C2B28A54E00DB0590 /* coffeefactoryUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = coffeefactoryUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		20356A142B49E41900D9412A /* description.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = description.md; sourceTree = "<group>"; };
+		207B98F52B5CD0BC00CACFDF /* TypoTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypoTestView.swift; sourceTree = "<group>"; };
+		207B98F72B5CD11000CACFDF /* SymbolTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolTestView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +106,7 @@
 		2025670A2B28A54B00DB0590 /* coffeefactory */ = {
 			isa = PBXGroup;
 			children = (
+				207B98F22B5CD07C00CACFDF /* Views */,
 				2025670B2B28A54B00DB0590 /* coffeefactoryApp.swift */,
 				2025670D2B28A54B00DB0590 /* ContentView.swift */,
 				20356A142B49E41900D9412A /* description.md */,
@@ -137,6 +142,31 @@
 				2025672C2B28A54E00DB0590 /* coffeefactoryUITestsLaunchTests.swift */,
 			);
 			path = coffeefactoryUITests;
+			sourceTree = "<group>";
+		};
+		207B98F22B5CD07C00CACFDF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				207B98F42B5CD0A500CACFDF /* TypoTestView */,
+				207B98F32B5CD08A00CACFDF /* SymbolTestView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		207B98F32B5CD08A00CACFDF /* SymbolTestView */ = {
+			isa = PBXGroup;
+			children = (
+				207B98F72B5CD11000CACFDF /* SymbolTestView.swift */,
+			);
+			path = SymbolTestView;
+			sourceTree = "<group>";
+		};
+		207B98F42B5CD0A500CACFDF /* TypoTestView */ = {
+			isa = PBXGroup;
+			children = (
+				207B98F52B5CD0BC00CACFDF /* TypoTestView.swift */,
+			);
+			path = TypoTestView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,8 +306,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				207B98F62B5CD0BD00CACFDF /* TypoTestView.swift in Sources */,
 				2025670E2B28A54B00DB0590 /* ContentView.swift in Sources */,
 				202567102B28A54B00DB0590 /* Item.swift in Sources */,
+				207B98F82B5CD11000CACFDF /* SymbolTestView.swift in Sources */,
 				2025670C2B28A54B00DB0590 /* coffeefactoryApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
