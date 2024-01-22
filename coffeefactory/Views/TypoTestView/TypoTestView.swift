@@ -14,7 +14,7 @@ struct TypoTestView: View {
     private var myBorderColor: Color = .cf(.colorScale(.blue(.base)))
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 4) {
+        VStack(alignment: .leading, spacing: .cfSpacing(.large)) {
             Text("Hello Coffee Factory\n1234567")
                 .foregroundStyle(myBorderColor)
                 .pretendard(.display)
@@ -53,7 +53,7 @@ struct TypoTestView: View {
                 .border(.cf(.colorScale(.green(.base))), width: 1)
         }
         .frame(alignment: .leading)
-        .padding()
+        .padding(.cfSpacing(.xxlarge))
         .border(.cf(.colorScale(.red(.darkness))), width: 2)
     }
 }
